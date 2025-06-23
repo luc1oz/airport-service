@@ -11,8 +11,8 @@
         <relativePath/>
     </parent>
 
-    <groupId>service.template</groupId>
-    <artifactId>service-template</artifactId>
+    <groupId>airport</groupId>
+    <artifactId>airport-service</artifactId>
     <version>${artifactVersion}</version>
 
     <properties>
@@ -83,10 +83,6 @@
             <artifactId>liquibase-core</artifactId>
         </dependency>
         <dependency>
-            <groupId>wsdl4j</groupId>
-            <artifactId>wsdl4j</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
@@ -111,24 +107,6 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>jaxb2-maven-plugin</artifactId>
-                <version>${jaxb2-maven-plugin.version}</version>
-                <executions>
-                    <execution>
-                        <id>xjc</id>
-                        <goals>
-                            <goal>xjc</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <sources>
-                        <source>src/main/resources/ws/xsd</source>
-                    </sources>
                 </configuration>
             </plugin>
         </plugins>
